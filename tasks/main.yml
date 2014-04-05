@@ -1,0 +1,3 @@
+---
+# tasks file for sysdig
+- include: sysdig.yml

@@ -1,0 +1,8 @@
+---
+# defaults file for sysdig
+sysdig_epel: "http://mirror.us.leaseweb.net/epel/6/i386/epel-release-6-8.noarch.rpm"
+sysdig_rpmkey: "https://s3.amazonaws.com/download.draios.com/DRAIOS-GPG-KEY.public"
+sysdig_url: "http://download.draios.com/stable/rpm/draios.repo"
+sysdig_repo: "/etc/yum.repos.d/draios.repo"
+sysdig_package: "sysdig"
+

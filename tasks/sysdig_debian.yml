@@ -14,8 +14,8 @@
   get_url: url={{ sysdig_url_apt }} dest={{ sysdig_repo_apt }} owner=root group=root mode=0644
   when: ansible_os_family == 'Debian'
 
-- name: Install Kernel Devel for Debian OS family
-  apt: pkg=kernel-devel-{{ ansible_kernel }} update_cache=yes state=latest
+- name: Install Linux Headers for Debian OS family
+  apt: pkg=linux-headers-{{ ansible_kernel }} update_cache=yes state=latest
   when: ansible_os_family == 'Debian'
 
 - name: Install Sysdig for Debian OS family

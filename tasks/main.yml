@@ -1,3 +1,4 @@
 ---
 # tasks file for sysdig
-- include: sysdig.yml
+- include: sysdig_redhat.yml
+- include: sysdig_debian.yml

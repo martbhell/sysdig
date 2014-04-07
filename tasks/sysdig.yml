@@ -6,7 +6,7 @@
   yum: name=kernel-devel-{{ ansible_kernel }} state=latest
 
 - name: Fetch Sysdig Key
-  rpm_key: key={{ sysdig_rpmkey }} state=present
+  rpm_key: key={{ sysdig_repokey }} state=present
 
 - name: Fecth Sysdig repo
   get_url: url={{ sysdig_url }} dest={{ sysdig_repo }} owner=root group=root mode=0644

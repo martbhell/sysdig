@@ -1,20 +1,33 @@
 ---
-- name: Enable Epel for RedHat OS family
-  yum: name={{ sysdig_epel }} state=present
-  when: ansible_os_family == 'RedHat'
+- name: Enable Epel for RedHat 6 OS family
+  yum: name={{ sysdig_epel_6 }} 
+       state=present
+  when: ansible_os_family == 'RedHat' and ansible_distribution_major_version == "6"
+
+- name: Enable Epel for RedHat 7 OS family
+  yum: name={{ sysdig_epel_7 }} 
+       state=present
+  when: ansible_os_family == 'RedHat' and ansible_distribution_major_version == "7"
 
 - name: Install Kernel Devel for RedHat OS family
-  yum: name=kernel-devel-{{ ansible_kernel }} state=latest
+  yum: name=kernel-devel-{{ ansible_kernel }} 
+       state=latest
   when: ansible_os_family == 'RedHat'
 
-- name: Fetch Sysdig Key for RedHat OS family
-  rpm_key: key={{ sysdig_repokey }} state=present
+- name: Get Sysdig Key for RedHat OS family
+  rpm_key: key={{ sysdig_repokey }} 
+           state=present
   when: ansible_os_family == 'RedHat'
 
-- name: Fecth Sysdig repo for RedHat OS family
-  get_url: url={{ sysdig_url }} dest={{ sysdig_repo }} owner=root group=root mode=0644
+- name: Get Sysdig repo for RedHat OS family
+  get_url: url={{ sysdig_url }} 
+           dest={{ sysdig_repo }} 
+           owner=root 
+           group=root 
+           mode=0644
   when: ansible_os_family == 'RedHat'
 
 - name: Install Sysdig for RedHat OS family
-  yum: name={{ sysdig_package }} state=latest
+  yum: name={{ sysdig_package }} 
+       state=latest
   when: ansible_os_family == 'RedHat'

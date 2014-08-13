@@ -13,17 +13,17 @@ Role Variables
 
 ```yaml
 
-`sysdig_repokey: "https://s3.amazonaws.com/download.draios.com/DRAIOS-GPG-KEY.public"`
+sysdig_repokey: "https://s3.amazonaws.com/download.draios.com/DRAIOS-GPG-KEY.public"
 
-`sysdig_url: "http://download.draios.com/stable/rpm/draios.repo"`
+sysdig_url: "http://download.draios.com/stable/rpm/draios.repo"
 
-`sysdig_repo: "/etc/yum.repos.d/draios.repo"`
+sysdig_repo: "/etc/yum.repos.d/draios.repo"
 
-`sysdig_package: "sysdig"`
+sysdig_package: "sysdig"
 
-`sysdig_url_apt: "http://download.draios.com/stable/deb/draios.list"`
+sysdig_url_apt: "http://download.draios.com/stable/deb/draios.list"
 
-`sysdig_repo_apt: "/etc/apt/sources.list.d/draios.list"`
+sysdig_repo_apt: "/etc/apt/sources.list.d/draios.list"
 ```
 
 Dependencies

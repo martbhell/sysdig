@@ -2,6 +2,8 @@
 # tasks file for sysdig
 - include: sysdig_RedHat.yml
   when: ansible_os_family == 'RedHat'
+  tags: [sysdig]
 
 - include: sysdig_Debian.yml
   when: ansible_os_family == 'Debian'
+  tags: [sysdig]

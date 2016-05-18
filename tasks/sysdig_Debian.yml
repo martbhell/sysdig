@@ -26,5 +26,4 @@
 - name: Install Sysdig for Debian OS family
   apt: pkg={{ sysdig_package }} 
        update_cache=yes 
-       cache_valid_time=30
        state=latest

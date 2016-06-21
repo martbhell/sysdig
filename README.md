@@ -38,7 +38,7 @@ Example Playbook
 ---
 - hosts: nodes
   roles:
-   - role: valentinogagliardi.sysdig
+   - role: sysdig
 ```
 
 License

@@ -34,10 +34,12 @@ None
 Example Playbook
 -------------------------
 
-    - hosts: nodes
-      roles:
-         - { role: valentinogagliardi.sysdig,
-                   tags: ["sysdig"] }
+```
+---
+- hosts: nodes
+  roles:
+   - role: valentinogagliardi.sysdig
+```
 
 License
 -------

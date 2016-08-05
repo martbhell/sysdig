@@ -179,7 +179,7 @@ galaxy_info:
     - stretch
     - wheezy
 
-  galaxy_tags: []
+  galaxy_tags:
     - monitoring
     - system
 

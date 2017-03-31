@@ -1,12 +1,12 @@
 ---
 - name: Install Kernel Devel for RedHat OS family
   yum: name=kernel-devel-{{ ansible_kernel }} 
-       state=latest
+       state={{ sysdig_kernel_package_state }}
   when: ansible_pkg_mgr == "yum"
 
 - name: Install Kernel Devel for RedHat OS family (Fedora)
   dnf: name=kernel-devel-{{ ansible_kernel }} 
-       state=latest
+       state={{ sysdig_kernel_package_state }}
   when: ansible_pkg_mgr == "dnf"
 
 - name: Get Sysdig Key for RedHat OS family
@@ -22,10 +22,10 @@
 
 - name: Install Sysdig for RedHat OS family
   yum: name={{ sysdig_package }} 
-       state=latest
+       state={{ sysdig_package_state }}
   when: ansible_pkg_mgr == "yum"
 
 - name: Install Sysdig for RedHat OS family (Fedora)
   dnf: name={{ sysdig_package }} 
-       state=latest
+       state={{ sysdig_package_state }}
   when: ansible_pkg_mgr == "dnf"

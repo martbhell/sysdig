@@ -3,7 +3,7 @@
   apt: pkg={{ item.package }} 
        update_cache=yes 
        cache_valid_time=30
-       state=present
+       state={{sysdig_kernel_package_state }}
   with_items: sysdig_aptutils
 
 - name: Get Sysdig Key for Debian OS family
@@ -21,9 +21,9 @@
   apt: pkg=linux-headers-{{ ansible_kernel }} 
        update_cache=yes 
        cache_valid_time=30
-       state=latest
+       state={{sysdig_kernel_package_state }}
 
 - name: Install Sysdig for Debian OS family
   apt: pkg={{ sysdig_package }} 
        update_cache=yes 
-       state=latest
+       state={{ sysdig_package_state }}

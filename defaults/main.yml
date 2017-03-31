@@ -5,6 +5,8 @@ sysdig_repokey: "https://s3.amazonaws.com/download.draios.com/DRAIOS-GPG-KEY.pub
 sysdig_url: "http://download.draios.com/stable/rpm/draios.repo"
 sysdig_repo: "/etc/yum.repos.d/draios.repo"
 sysdig_package: "sysdig"
+sysdig_kernel_package_state: "present"
+sysdig_package_state: "present"
 
 sysdig_aptutils:
  - { package: "python-pycurl" }
